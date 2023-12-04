@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>TMDb</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#F5C518">
+    <link rel="stylesheet" type="text/css" href="style/style.css">
+</head>
+
+<body>
+    <div class="nav" id="header">
+        <h2 class="logo" onclick="recommend()">TMDb</h2>
+        <nav>
+            <ul>
+                <li><a href=# id="home" onclick="toggle()">HOME</a></li>
+                <li><a href=# id="latest" onclick="toggle()">LATEST</a></li>
+                <li><a href=# id="movie" onclick="toggle()">MOVIES</a></li>
+                <li><a href=# id="tv" onclick="toggle()">TV SHOWS</a></li>
+                <li><a href=# id="series" onclick="toggle()">WEB SERIES</a></li>
+            </ul>
+        </nav>
+        <div class="search-div">
+            <form onsubmit="formSearch(event)">
+                <button onclick="search()">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button><input class="search-box" id="search" type="text" name="search_txt" placeholder="Search: Movies, Series, Drama...">
+            </form>
+        </div>
+        <div class="toggle" onclick="toggle()"></div>
+    </div>
+    <div class="container row" id="items"></div>
+    <div class="blur" id="blur" onclick="loadlander()"></div>
+    <div class="lander" id="lander">
+        <img id="land_img" src="#">
+        <div class="detail-box">
+            <div class="lander-closer" onclick="loadlander()"></div>
+            <p id="land_title" class="title"></p>
+            <p id="land_reldate" class="date-field"></p>
+            <div class="rating">
+                <div>
+                    <p>Rating</p>
+                    <p id="land_rate"></p>
+                </div>
+                <div>
+                    <p>Popularity</p>
+                    <p id="land_pop"></p>
+                </div>
+            </div>
+            <p id="land_desc" class="overview"></p>
+        </div>
+    </div>
+    <a href="#" class="up-arrow">
+        <i class="fa fa-solid fa-up-long" style="color: #F5C518;font-size: 2rem;"></i>
+    </a>
+    <p class="nofound" id="notFound">Sorry,We can't found your search :(</p>
+    <div class="footer" id="foot">
+        Copyright © 2022 tmdb.com<br>
+        By Prathamesh
+    </div>
+    <script src="js/index.js"></script>
+    <script src="https://kit.fontawesome.com/fdca8d41df.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
